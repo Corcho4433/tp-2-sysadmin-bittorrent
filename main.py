@@ -68,7 +68,7 @@ def download_torrent(torrent_path_or_magnet, download_dir):
                  'finished', 'seeding', 'allocating', 'checking fastresume']
 
     try:
-        while not h.status().is_seeding:
+        while True:
             s = h.status()
             clear_screen()
 
